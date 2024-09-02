@@ -1,5 +1,6 @@
 package com.fsse2406.project.api;
 
+import com.fsse2406.project.config.EnvConfig;
 import com.fsse2406.project.data.product.domainObject.response.ProductResponseData;
 import com.fsse2406.project.data.product.dto.response.GetAllProductsResponseDto;
 import com.fsse2406.project.data.product.dto.response.ProductResponseDto;
@@ -11,8 +12,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@CrossOrigin("http://localhost:5174")
 @RequestMapping("/public/product")
+@CrossOrigin({EnvConfig.DEV_BASE_URL, EnvConfig.PROD_BASE_URL})
 public class ProductApi {
     private final ProductService productService;
 

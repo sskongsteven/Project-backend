@@ -36,6 +36,6 @@ tasks.named('test') {
 
 jib {
     to {
-        image = "docker.io/qpalzm12345/pronpm create vite@latestject-backend"
+        image = "docker.io/qpalzm12345/project-backend"
     }
 }

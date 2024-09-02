@@ -1,5 +1,6 @@
 package com.fsse2406.project.api;
 
+import com.fsse2406.project.config.EnvConfig;
 import com.fsse2406.project.data.cartItem.domainObject.response.CartItemResponseData;
 import com.fsse2406.project.data.cartItem.dto.response.CartItemResponseDto;
 import com.fsse2406.project.data.cartItem.dto.response.SuccessResponseDto;
@@ -15,7 +16,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/cart")
-@CrossOrigin(origins = "http://localhost:5174")
+@CrossOrigin({EnvConfig.DEV_BASE_URL, EnvConfig.PROD_BASE_URL})
 public class CartItemApi {
     private final CartItemService cartItemService;
 
